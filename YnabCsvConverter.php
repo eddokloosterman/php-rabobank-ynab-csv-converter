@@ -20,7 +20,7 @@ class YnabCsvConverter extends stdClass
 	
 	private $_accounts;	
 	
-	private $_exportDirectory = '/Users/eddo/Desktop/';
+	private $_exportDirectory = '~/Desktop/';
 	
 	public function convert($filename)
 	{
