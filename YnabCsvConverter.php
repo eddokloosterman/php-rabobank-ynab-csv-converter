@@ -91,7 +91,7 @@ class YnabCsvConverter extends stdClass
 		$ynab_line->memo 	 = trim($this->_getDescription($csv_line));
 		$ynab_line->outflow  = '';
 		$ynab_line->inflow   = '';
-		
+
 		switch ($csv_line[3])
 		{
 			case 'D':
@@ -101,7 +101,7 @@ class YnabCsvConverter extends stdClass
 				$ynab_line->inflow = $csv_line[4];
 				break;
 		}
-		
+
 		return $ynab_line;
 	}
 	
@@ -150,7 +150,7 @@ class YnabCsvConverter extends stdClass
 	
 	private function _getDate(array $csv_line)
 	{
-		return $this->_convertDate($csv_line[2]);
+		return $this->_convertDate($csv_line[7]);
 	}
 	
 	private function _getPayee(array $csv_line)
